@@ -22,22 +22,22 @@ namespace SimplyRestSharpClient
             return asyncHandler;
         }
 
-        public async Task<IRestResponse<T>> RestPostAsync<T>(string resource, object param) where T : new()
+        public async Task<IRestResponse<T>> PostAsync<T>(string resource, object param) where T : new()
         {
             return await RestExecuteAsync<T>(resource, param, Method.POST);
         }
 
-        public async Task<IRestResponse<T>> RestGetAsync<T>(string resource, object param) where T : new()
+        public async Task<IRestResponse<T>> GetAsync<T>(string resource, object param) where T : new()
         {
             return await RestExecuteAsync<T>(resource, param, Method.GET);
         }
 
-        public async Task<IRestResponse<T>> RestPutAsync<T>(string resource, object param) where T : new()
+        public async Task<IRestResponse<T>> PutAsync<T>(string resource, object param) where T : new()
         {
             return await RestExecuteAsync<T>(resource, param, Method.PUT);
         }
 
-        public async Task<IRestResponse<T>> RestDeleteAsync<T>(string resource, object param) where T : new()
+        public async Task<IRestResponse<T>> DeleteAsync<T>(string resource, object param) where T : new()
         {
             return await RestExecuteAsync<T>(resource, param, Method.DELETE);
         }
@@ -52,7 +52,7 @@ namespace SimplyRestSharpClient
             return asyncHandler;
         }
 
-        public async Task<IRestResponse> RestPostAsync(string resource, object param)
+        public async Task<IRestResponse> PostAsync(string resource, object param)
         {
             return await RestExecuteAsync(resource, param, Method.POST);
         }
