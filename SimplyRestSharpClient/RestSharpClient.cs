@@ -56,8 +56,7 @@ namespace SimplyRestSharpClient
             return asyncHandler;
         }
 
-
-		public async Task<IRestResponse> PostAsync(string resource, object param = null)
+    		public async Task<IRestResponse> PostAsync(string resource, object param = null)
         {
             return await RestExecuteAsync(resource, param, Method.POST);
         }
@@ -102,6 +101,21 @@ namespace SimplyRestSharpClient
         }
 
 		#endregion IDisposable
+
+        public async Task<IRestResponse> GetAsync(string resource, object param) 
+        {
+            return await RestExecuteAsync(resource, param, Method.GET);
+        }
+
+        public async Task<IRestResponse> PutAsync(string resource, object param) 
+        {
+            return await RestExecuteAsync(resource, param, Method.PUT);
+        }
+
+        public async Task<IRestResponse> DeleteAsync(string resource, object param) 
+        {
+            return await RestExecuteAsync(resource, param, Method.DELETE);
+        }
 
     }
 
